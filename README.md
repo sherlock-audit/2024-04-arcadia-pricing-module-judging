@@ -52,6 +52,20 @@ The protocol team fixed this issue in the following PRs/commits:
 https://github.com/arcadia-finance/accounts-v2/pull/201
 
 
+**midori-fuse**
+
+I understand that the escalation phase is over, and I fully accept that the result cannot be changed further. However I do think this is a dupe of #18 for the following reasons.
+
+Essentially both attacks involve opening a new Aerodrome pool, and increasing the LP position's underlying worth using fees. When you donate your assets into the pool, it has the same effect as when you swap back and forth within the pool (whatever stays in the pool gets counted as fees). Therefore the two issues are a dupe because:
+- While the root causes can be considered different, the differences lie in the Aerodrome pool, not the Arcadia pricing module. What enabled this attack within the pricing module are the same: fees are always applied directly and fully without capping.
+- I can't identify a fix that would fix one problem but without fixing the other.
+  - Note that the sponsor making the same PR isn't a factor, there may still be a fix that separates these two issues that we failed to identify.
+
+Am I missing anything? Is there a difference in root cause/impact/fix that makes the two issues different?
+
+We shall still respect the current/final judgement regardless. Even if the "ideal" result is different from currently, it was fully on us to not have examined the issues diligently in the 48-hour escalation period that we were given.
+
+
 # Issue M-2: Swapping large amounts of assets back and forth in an Aerodrome pool allows to bypass exposure limits 
 
 Source: https://github.com/sherlock-audit/2024-04-arcadia-pricing-module-judging/issues/18 
@@ -185,4 +199,8 @@ Consider changing `decreaseLiquidity` and `claimFees` functions as follows:
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/arcadia-finance/accounts-v2/pull/202
 
+
+**oxwhite**
+
+What does "besides a standard implementation have one of the following "weird behaviours": Revert on Zero Value" mean? What ı understand the protocol will not accept any vulnerability related to "Revert on Zero Value" and the followings mentioned in ReadMe, which means it is out of scope. How can this submission be valid?
 
