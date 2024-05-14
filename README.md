@@ -66,6 +66,10 @@ Am I missing anything? Is there a difference in root cause/impact/fix that makes
 We shall still respect the current/final judgement regardless. Even if the "ideal" result is different from currently, it was fully on us to not have examined the issues diligently in the 48-hour escalation period that we were given.
 
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-2: Swapping large amounts of assets back and forth in an Aerodrome pool allows to bypass exposure limits 
 
 Source: https://github.com/sherlock-audit/2024-04-arcadia-pricing-module-judging/issues/18 
@@ -126,6 +130,10 @@ A similar attack is possible on UniswapV3 positions, however in that case the pr
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/arcadia-finance/accounts-v2/pull/201
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-3: WrappedAerodromeAM.sol is not compatible with the Revert on Zero Value Tokens 
 
@@ -203,4 +211,8 @@ https://github.com/arcadia-finance/accounts-v2/pull/202
 **oxwhite**
 
 What does "besides a standard implementation have one of the following "weird behaviours": Revert on Zero Value" mean? What ı understand the protocol will not accept any vulnerability related to "Revert on Zero Value" and the followings mentioned in ReadMe, which means it is out of scope. How can this submission be valid?
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
